@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public int requiredCollectables;
     public int currentCollectables;
     public TMP_Text collectablesText;
+    public GameObject Key;
+    public bool mission;
 
     [Header("Door")]
     public GameObject door;
@@ -23,6 +25,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        canOpen = false;
         timer = timeLimit;
     }
 
@@ -31,6 +34,7 @@ public class GameManager : MonoBehaviour
     {
         GameTimer();
         Collectables();
+        KeyShow();
     }
 
     void GameTimer()
@@ -53,7 +57,24 @@ public class GameManager : MonoBehaviour
 
         if (currentCollectables == requiredCollectables)
         {
-            canOpen = true;
+            canOpen = !canOpen;
+            currentCollectables = 0;
+        }
+        if (currentCollectables == requiredCollectables && mission)
+        {
+            Debug.Log("End");
+        }
+    }
+
+    void KeyShow()
+    {
+        if (canOpen == true)
+        {
+            Key.SetActive(true);
+        }
+        else
+        {
+            Key.SetActive(false);
         }
     }
 }

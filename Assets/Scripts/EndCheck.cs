@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class EndCheck : MonoBehaviour
 {
     [Header("Script")]
     public GameManager managerScript;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && managerScript.canOpen == true)
+        if (other.CompareTag("Player"))
         {
-            Destroy(gameObject);
-            managerScript.canOpen = !managerScript.canOpen;
+            managerScript.mission = true;
         }
     }
 }
