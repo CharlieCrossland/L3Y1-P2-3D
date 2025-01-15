@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public int currentCollectables;
     public TMP_Text collectablesText;
     public GameObject Key;
+    public GameObject Arrow;
     public bool mission;
 
     [Header("Door")]
@@ -34,6 +35,7 @@ public class GameManager : MonoBehaviour
     {
         Collectables();
         KeyShow();
+        arrowDoor();
     }
 
     void GameTimer()
@@ -74,6 +76,18 @@ public class GameManager : MonoBehaviour
         else
         {
             Key.SetActive(false);
+        }
+    }
+
+    void arrowDoor()
+    {
+        if (canOpen == true)
+        {
+            Arrow.SetActive(true);
+        }
+        else
+        {
+            Arrow.SetActive(false);
         }
     }
 }
