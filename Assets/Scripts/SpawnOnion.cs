@@ -19,7 +19,7 @@ public class SpawnOnion : MonoBehaviour
     {
         if (OnionScript.spawnEnemy == true)
         {
-            Instantiate(OnionModel, SpawnPoint);
+           
         }
     }
 }
