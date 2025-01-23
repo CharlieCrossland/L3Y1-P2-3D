@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class SlowDown : MonoBehaviour
 {
-    public CarController carScript;
+    public CarController carScripts;
+
+    public SpeedBoost boostScript;
 
     public bool activeEnd;
 
@@ -24,12 +26,14 @@ public class SlowDown : MonoBehaviour
     {
         if (activeEnd)
         {
-            carScript.maxSpeed = 9f;
-            carScript.forwardAccel = 3.5f;
-            carScript.reverseAccel = 2f;
+            //carScript.maxSpeed = 9f;
+            //carScript.forwardAccel = 3.5f;
+            //carScript.reverseAccel = 2f;
 
             Wall.SetActive(true);
             returnPoint.SetActive(true);
+
+            boostScript.active = false;
         }
     }
 

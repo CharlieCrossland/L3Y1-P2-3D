@@ -6,17 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("Timer")]
-    public float timer;
-    public float timeLimit;
-    public TMP_Text timerText;
+    //[Header("Timer")]
+    //public float timer;
+    //public float timeLimit;
+    //public TMP_Text timerText;
 
-    [Header("Collectables")]
+    //[Header("Collectables")]
     public int requiredCollectables;
     public int currentCollectables;
-    public TMP_Text collectablesText;
+    //public TMP_Text collectablesText;
     public GameObject Key;
-    public GameObject Arrow;
     public bool mission;
 
     [Header("Door")]
@@ -27,7 +26,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         canOpen = false;
-        timer = timeLimit;
+       // timer = timeLimit;
     }
 
     // Update is called once per frame
@@ -35,26 +34,30 @@ public class GameManager : MonoBehaviour
     {
         Collectables();
         KeyShow();
-        arrowDoor();
-    }
 
-    void GameTimer()
-    {
-        timerText.text = timer.ToString("F2");
-
-        if (timer <= 0)
+        if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        else
-        {
-            timer -= Time.deltaTime;            
-        }
     }
+
+    //void GameTimer()
+    //{
+        //timerText.text = timer.ToString("F2");
+
+       // if (timer <= 0)
+        //{
+        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+       // }
+       // else
+       // {
+           // timer -= Time.deltaTime;            
+       // }
+    //}
 
     void Collectables()
     {
-        collectablesText.text = currentCollectables + " / " + requiredCollectables;
+        //collectablesText.text = currentCollectables + " / " + requiredCollectables;
 
         if (currentCollectables == requiredCollectables)
         {
@@ -76,18 +79,6 @@ public class GameManager : MonoBehaviour
         else
         {
             Key.SetActive(false);
-        }
-    }
-
-    void arrowDoor()
-    {
-        if (canOpen == true)
-        {
-            Arrow.SetActive(true);
-        }
-        else
-        {
-            Arrow.SetActive(false);
         }
     }
 }

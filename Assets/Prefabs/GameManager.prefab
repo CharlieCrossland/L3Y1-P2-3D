@@ -44,11 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42a5f89b2e820904b8ef38856a04874c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0
-  timeLimit: 10
-  timerText: {fileID: 0}
   requiredCollectables: 1
   currentCollectables: 0
-  collectablesText: {fileID: 0}
+  Key: {fileID: 0}
+  mission: 0
   door: {fileID: 0}
   canOpen: 0

@@ -9,6 +9,9 @@ TagManager:
   - Onion
   - Onion1
   - Carrot
+  - Checkpoint
+  - KillPlayer
+  - Lighting
   layers:
   - Default
   - TransparentFX

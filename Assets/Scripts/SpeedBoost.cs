@@ -17,11 +17,18 @@ public class SpeedBoost : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (active)
+        if (active == true)
         {
             carScript.maxSpeed = 28;
             carScript.forwardAccel = 6;
             carScript.reverseAccel = 0;
+        }
+
+        if (active == false)
+        {
+            carScript.maxSpeed = 9;
+            carScript.forwardAccel = 3.5f;
+            carScript.reverseAccel = 2;
         }
     }
 
