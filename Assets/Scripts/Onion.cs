@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class Onion : MonoBehaviour
 {
     public float moveSpeed;
-    public bool spawnEnemy;
 
     // Start is called before the first frame update
     void Start()
@@ -22,11 +21,6 @@ public class Onion : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("endPath"))
-        {
-            Destroy(this.gameObject);
-            spawnEnemy = true;
-        }
         if (other.CompareTag("Player"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

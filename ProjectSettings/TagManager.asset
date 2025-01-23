@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Wall
   - endPath
+  - Onion
+  - Onion1
+  - Carrot
   layers:
   - Default
   - TransparentFX
