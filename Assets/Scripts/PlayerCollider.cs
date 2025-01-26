@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NewBehaviourScript : MonoBehaviour
 {
@@ -28,6 +29,10 @@ public class NewBehaviourScript : MonoBehaviour
         if (other.CompareTag("KillPlayer"))
         {
             transform.position = startPos;
+        }
+        if (other.CompareTag("KillPlayerResetScene"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
         if (other.CompareTag("Lighting"))
         {

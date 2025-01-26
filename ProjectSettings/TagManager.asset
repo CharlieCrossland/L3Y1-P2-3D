@@ -12,6 +12,7 @@ TagManager:
   - Checkpoint
   - KillPlayer
   - Lighting
+  - KillPlayerResetScene
   layers:
   - Default
   - TransparentFX
