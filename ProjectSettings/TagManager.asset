@@ -13,6 +13,7 @@ TagManager:
   - KillPlayer
   - Lighting
   - KillPlayerResetScene
+  - CabbageJumpscare
   layers:
   - Default
   - TransparentFX

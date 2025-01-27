@@ -38,5 +38,9 @@ public class NewBehaviourScript : MonoBehaviour
         {
             globalVolumeChange.lightChange = true;
         }
+        if (other.CompareTag("CabbageJumpscare"))
+        {
+            SceneManager.LoadScene("CabbageJumpscare");
+        }
     }
 }
