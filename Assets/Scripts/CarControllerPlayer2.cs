@@ -35,6 +35,14 @@ public class CarControllerP2 : MonoBehaviour
     private float emissionRate;
     private GameObject particleHolder;
 
+    [Header("Timer")]
+    public float timer;
+    public float timeLimit;
+
+    [Header("Boost")]
+    public bool hitBoost;
+    public bool boostTimer;
+
 
     void Start()
     {
@@ -49,10 +57,14 @@ public class CarControllerP2 : MonoBehaviour
         {
             particleHolder.SetActive(false);
         }
+
+        timer = timeLimit;
     }
 
     void Update()
     {
+
+        MPSpeedBoost2();
 
         speedInput = 0f;
         if (Input.GetAxis("VerticalPlayer2") > 0) 
@@ -79,6 +91,31 @@ public class CarControllerP2 : MonoBehaviour
         leftFrontWheel.localRotation = Quaternion.Euler(leftFrontWheel.localRotation.eulerAngles.x, (turnInput * maxWheelTurn) - 180, leftFrontWheel.localRotation.eulerAngles.z);
         rightFrontWheel.localRotation = Quaternion.Euler(rightFrontWheel.localRotation.eulerAngles.x, turnInput * maxWheelTurn, rightFrontWheel.localRotation.eulerAngles.z);
         transform.position = theRB.transform.position;
+    }
+
+    void MPSpeedBoost2()
+    {
+        if (hitBoost == true)
+        {
+           maxSpeed = 20f;
+           forwardAccel = 10f; 
+           boostTimer = true;
+        }
+
+        if (boostTimer == true)
+        {
+            if (timer <= 0)
+            {
+                maxSpeed = 17f;
+                forwardAccel = 6f;
+                hitBoost = false;
+                boostTimer = false;
+            }
+            else
+            {
+              timer -= Time.deltaTime;  
+            }
+        }
     }
 
     private void FixedUpdate()

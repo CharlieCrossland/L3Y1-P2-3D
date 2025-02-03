@@ -56,6 +56,7 @@ public class Countdown : MonoBehaviour
         if (timer <= 0)
         {
             disableMov = false;
+            timerOBJ.SetActive(false);
         }
         else
         {

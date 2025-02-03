@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerCollider : MonoBehaviour
+public class Player2Collider : MonoBehaviour
 {
     public GlobalVolumeChange globalVolumeChange;
     public Vector3 startPos;
@@ -15,7 +15,7 @@ public class PlayerCollider : MonoBehaviour
     public AudioSource dieSFX;
 
     [Header("Script")]
-    public CarController PlayerScript;
+    public CarControllerP2 P2Script;
 
     // Start is called before the first frame update
     void Start()
@@ -65,7 +65,7 @@ public class PlayerCollider : MonoBehaviour
         }
         if (other.CompareTag("MPBoost"))
         {
-            PlayerScript.hitBoost = true;
+            P2Script.hitBoost = true;
             Destroy(other.gameObject);
         }
         if (other.CompareTag("MPEnd"))

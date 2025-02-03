@@ -39,6 +39,14 @@ public class CarController : MonoBehaviour
     public AudioSource engineSound;
     public AudioSource hornSound;
 
+    [Header("Timer")]
+    public float timer;
+    public float timeLimit;
+
+    [Header("Boost")]
+    public bool hitBoost;
+    public bool boostTimer;
+
 
     void Start()
     {
@@ -53,12 +61,15 @@ public class CarController : MonoBehaviour
         {
             particleHolder.SetActive(false);
         }
+
+        timer = timeLimit;
     }
 
     void Update()
     {
 
         AudioHandling();
+        MPSpeedBoost();
 
 
         speedInput = 0f;
@@ -91,6 +102,31 @@ public class CarController : MonoBehaviour
     void AudioHandling()
     {
         engineSound.pitch = 1 + (speedInput / 10000);
+    }
+
+    void MPSpeedBoost()
+    {
+        if (hitBoost == true)
+        {
+           maxSpeed = 20f;
+           forwardAccel = 10f; 
+           boostTimer = true;
+        }
+
+        if (boostTimer == true)
+        {
+            if (timer <= 0)
+            {
+                maxSpeed = 17f;
+                forwardAccel = 6f;
+                hitBoost = false;
+                boostTimer = false;
+            }
+            else
+            {
+              timer -= Time.deltaTime;  
+            }
+        }
     }
 
     private void FixedUpdate()

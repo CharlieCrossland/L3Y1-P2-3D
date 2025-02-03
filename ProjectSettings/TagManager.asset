@@ -16,6 +16,9 @@ TagManager:
   - CabbageJumpscare
   - Key
   - Door
+  - Player2
+  - MPBoost
+  - MPEnd
   layers:
   - Default
   - TransparentFX
