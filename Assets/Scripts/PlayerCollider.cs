@@ -66,7 +66,6 @@ public class PlayerCollider : MonoBehaviour
         if (other.CompareTag("MPBoost"))
         {
             PlayerScript.hitBoost = true;
-            Destroy(other.gameObject);
         }
         if (other.CompareTag("MPEnd"))
         {

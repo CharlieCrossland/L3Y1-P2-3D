@@ -48,7 +48,7 @@ public class CarControllerP2 : MonoBehaviour
     {
         theRB = gameObject.GetComponentInChildren<Rigidbody>(); //grabs the Rigidbody in the Sphere that is a child of the main gameObject.
         theRB.transform.parent = null; //moves the sphere out of the parent into the root. 
-        groundRayPoint = GameObject.Find("ray point").transform; // finds the raycast point for grounded.
+        groundRayPoint = GameObject.Find("ray point 2").transform; // finds the raycast point for grounded.
         particleHolder = GameObject.Find("Particle Holder"); // grabs the holder of the particles
 
         dustTrail = GetComponentsInChildren<ParticleSystem>();
@@ -59,6 +59,8 @@ public class CarControllerP2 : MonoBehaviour
         }
 
         timer = timeLimit;
+        hitBoost = false;
+        boostTimer = false;
     }
 
     void Update()

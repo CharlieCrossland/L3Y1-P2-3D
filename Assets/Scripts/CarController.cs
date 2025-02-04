@@ -63,6 +63,8 @@ public class CarController : MonoBehaviour
         }
 
         timer = timeLimit;
+        hitBoost = false;
+        boostTimer = false;
     }
 
     void Update()
