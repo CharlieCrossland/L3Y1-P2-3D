@@ -112,6 +112,7 @@ public class CarControllerP2 : MonoBehaviour
                 forwardAccel = 6f;
                 hitBoost = false;
                 boostTimer = false;
+                timer = timeLimit;
             }
             else
             {

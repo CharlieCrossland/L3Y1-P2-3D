@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 4c0dc6673d92a804f8bd506da0252013
+  - enabled: 1
     path: Assets/Scenes/Levels/Level1 - Fridge.unity
     guid: 5acc6059cb01b5845b6176b527ee35cb
   - enabled: 1
@@ -26,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Jumpscares/CabbageJumpscare.unity
     guid: 33328f4bb48f20e4aa549aec61a988bd
+  - enabled: 1
+    path: Assets/Scenes/MultiplayerTracks/Track 1.unity
+    guid: ee4130e08e82abf44b7def7fcb99db7a
   m_configObjects: {}

@@ -123,6 +123,7 @@ public class CarController : MonoBehaviour
                 forwardAccel = 6f;
                 hitBoost = false;
                 boostTimer = false;
+                timer = timeLimit;
             }
             else
             {
