@@ -6,15 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    //[Header("Timer")]
-    //public float timer;
-    //public float timeLimit;
-    //public TMP_Text timerText;
-
-    //[Header("Collectables")]
+    [Header("Collectables")]
     public int requiredCollectables;
     public int currentCollectables;
-    //public TMP_Text collectablesText;
     public GameObject Key;
     public bool mission;
 
@@ -26,7 +20,6 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         canOpen = false;
-       // timer = timeLimit;
     }
 
     // Update is called once per frame
@@ -41,23 +34,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //void GameTimer()
-    //{
-        //timerText.text = timer.ToString("F2");
-
-       // if (timer <= 0)
-        //{
-        //    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-       // }
-       // else
-       // {
-           // timer -= Time.deltaTime;            
-       // }
-    //}
-
     void Collectables()
     {
-        //collectablesText.text = currentCollectables + " / " + requiredCollectables;
 
         if (currentCollectables == requiredCollectables)
         {
