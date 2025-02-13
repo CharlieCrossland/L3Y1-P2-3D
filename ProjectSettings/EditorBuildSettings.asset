@@ -27,6 +27,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/FinalLevel.unity
     guid: 0137dfc0f0de8134ebaa6ea325551c1f
   - enabled: 1
+    path: Assets/Scenes/Levels/FinalLevel2.unity
+    guid: aae833d3fd584734f99ff11e66929534
+  - enabled: 1
+    path: Assets/Scenes/Levels/FinalLevel3.unity
+    guid: d1e7cfbdaca1bac4eb81038f3d639a9a
+  - enabled: 1
     path: Assets/Scenes/Jumpscares/CabbageJumpscare.unity
     guid: 33328f4bb48f20e4aa549aec61a988bd
   - enabled: 1
